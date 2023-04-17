@@ -1,0 +1,131 @@
+.use-test {
+  border-radius: 0.1rem;
+  box-shadow: 0 0.5rem 1rem rgba(204, 204, 204, 0.15);
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  margin-top: 5rem;
+  background-color: #ccc;
+  color: #006666;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.content {
+  margin-top: 1rem;
+}
+
+.sidebar {
+  margin-bottom: 1rem;
+}
+
+.content {
+  padding-right: 1rem;
+}
+
+.sidebar {
+  padding-right: 1rem;
+}
+
+.alert {
+  background-color: #17a2b8;
+}
+
+.list-box .list {
+  list-style: decimal;
+  padding-left: 2rem;
+}
+
+.list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.list-box .list {
+  list-style: disc;
+}
+.list-box .list .list-item {
+  margin-right: 2rem;
+}
+
+.btns .btn {
+  padding: 0.5rem 1.5rem;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  background-color: rgb(43, 131, 43);
+  border: 1px solid rgb(43, 131, 43);
+  cursor: pointer;
+}
+.btns .btn.btn-3 {
+  padding: 0.5rem 1.5rem;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  background-color: rgb(255, 128, 23);
+  border: 1px solid rgb(255, 128, 23);
+  cursor: pointer;
+}
+.btns .btn.btn-3:not([disabled]):hover {
+  background-color: white;
+  border-color: rgb(255, 128, 23);
+  color: rgb(255, 128, 23);
+}
+.btns .btn.btn-4 {
+  padding: 0.5rem 1.5rem;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  background-color: rgb(226, 42, 17);
+  border: 1px solid rgb(226, 42, 17);
+  cursor: pointer;
+}
+.btns .btn.btn-4:not([disabled]):hover {
+  background-color: #f04c36;
+  border-color: #b3210d;
+}
+
+.btn {
+  color: #6b717f;
+  border: 1px solid #878d9a;
+}
+
+.use-test {
+  position: relative;
+}
+.use-test::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  background-color: rgb(8, 182, 8);
+  border-radius: 5px;
+}
+
+.content {
+  padding: 5rem 3rem;
+}
+
+ul li:last-child {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+ul li:last-child {
+  display: inline-block;
+  margin-left: -2px;
+  margin-right: 2em;
+}
+
+/*# sourceMappingURL=style.css.map */

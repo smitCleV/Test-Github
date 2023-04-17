@@ -1,0 +1,50 @@
+@use "sass:map";
+$red: rgb(226, 42, 17);
+$green: rgb(43, 131, 43);
+$orange: rgb(255, 128, 23);
+$white: white !default;
+
+// global value
+$variable: bottom;
+.content {
+    // local value
+    $variable: top;
+    margin-#{$variable}: 1rem;
+}
+
+.sidebar {
+    margin-#{$variable}: 1rem;
+}
+
+
+$dark-theme: true !default;
+$primary-color: #f8bbd0;
+$accent-color: #6a1b9a !default;
+
+
+
+
+// **** this example is local var to global variabl
+// global value
+$variable: left;
+.content {
+    // local value
+    $variable: right !global;
+    padding-#{$variable}: 1rem;
+}
+
+.sidebar {
+    padding-#{$variable}: 1rem;
+}
+
+
+// Advanced Variable Functions
+$theme-colors: (
+  "success": #28a745,
+  "info": #17a2b8,
+  "warning": #ffc107,
+);
+
+.alert {
+  background-color: map.get($theme-colors, "info");
+}

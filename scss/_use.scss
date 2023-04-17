@@ -1,0 +1,22 @@
+// Adding a Prefix
+@forward 'forward' as list-*;
+
+// Controlling Visibility
+@forward 'forward' hide reset;
+
+// Default Values difand to "ues with" in overwritten variables value
+$black: #000 !default;
+$border-radius: 0.25rem !default;
+$box-shadow: 0 0.5rem 1rem rgba($black, 0.15) !default;
+$text_color: #006666 !default; 
+
+.use-test {
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: 5rem;
+    background-color: $black;
+    color: $text_color;
+}

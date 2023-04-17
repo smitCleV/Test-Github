@@ -1,0 +1,62 @@
+
+.list-box {
+    .list {
+        list-style: decimal;
+        padding-left: 2rem;
+    }
+}
+.list {
+    @include new_mixin(center, center);
+    .list-box & {
+        list-style: disc;
+    }
+    .list-box & .list-item {
+        margin-right: 2rem;
+    }
+}
+
+.btns {
+    .btn {
+        @include common_btn();
+        &.btn-3 {
+            @include common_btn($white, $orange);
+            @include hover {
+                background-color: $white;
+                border-color: $orange;
+                color: $orange;
+            }
+        }
+        &.btn-4 {
+            @include common_btn($white, $red);
+            @include hover {
+                background-color: lighten($red, 10%);
+                border-color: darken($red, 10%);
+            }
+        }
+    }
+}
+
+.btn {
+    $primary-color: #6b717f;
+    color: $primary-color;
+    border: 1px solid color.scale($primary-color, $lightness: 20%);
+}
+
+.use-test {
+    @include before_box;
+
+    // This is an error!  $-green This variable does not use the outer side 
+    // background-color: $-green;
+}
+
+.content {
+    @include padding;
+}
+
+ul li{
+    &:last-child{
+        @include use.list-horizontal;
+        // this mixin is hide
+        // @include use.reset;
+    }
+}

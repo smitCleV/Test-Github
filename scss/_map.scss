@@ -1,0 +1,71 @@
+@use "sass:map";
+
+$helvetica-light: (
+  "weights": (
+    "lightest": 100,
+    "light": 300
+  )
+);
+$helvetica-heavy: (
+  "weights": (
+    "medium": 500,
+    "bold": 700,
+    'semibold': 600 
+  )
+);
+
+@debug map.deep-merge($helvetica-light, $helvetica-heavy);
+// (
+//   "weights": (
+//     "lightest": 100,
+//     "light": 300,
+//     "medium": 500,
+//     "bold": 700
+//   )
+// )
+@debug map.merge($helvetica-light, $helvetica-heavy);
+// (
+//   "weights": (
+//     "medium: 500,
+//     "bold": 700
+//   )
+// )
+
+// remove map 
+@debug map.deep-remove($helvetica-heavy, "weights", "semibold"); //("weights": ("medium": 500, "bold": 700))
+
+// set map 
+@debug map.set($helvetica-heavy, "weights", "semibold", 500);
+
+
+@debug map.values($helvetica-heavy);
+
+// -----------------------------
+
+$fonts: (
+  "Helvetica": (
+    "weights": (
+      "regular": 400,
+      "medium": 500,
+      "bold": 700
+    )
+  )
+);
+
+@debug map.get($fonts, "Helvetica", "weights", "regular"); // 400
+@debug map.get($fonts, "Helvetica", "medium"); //null
+
+// ---------------------------------
+
+$fonts_2: (
+  "Helvetica": (
+    "weights": (
+      "regular": 400,
+      "medium": 500,
+      "bold": 700
+    )
+  )
+);
+
+@debug map.has-key($fonts_2, "Helvetica", "weights", "regular"); // true
+@debug map.has-key($fonts_2, "Helvetica", "colors"); // false
